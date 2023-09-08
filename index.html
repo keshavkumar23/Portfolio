@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keshav's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <span class="logo">kesha<span class="logoD">V.</span></span>
+        <div class="spy-indicator">
+            <a href="#home" class="side-nav active-side-nav" onclick="opensidetab()" data-name="Home"></a>
+            <a href="#about" class="side-nav" onclick="opensidetab()" data-name="About"></a>
+            <a href="#work-section" class="side-nav" onclick="opensidetab()" data-name="MyWork"></a>
+            <a href="#contact" class="side-nav" onclick="opensidetab()" data-name="Contact"></a>
+        </div>
+        <div class="photo section" id="home">
+            <nav>
+                <ul>
+                    <i class="fa fa-times" aria-hidden="true" onclick="hideNav()"></i>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work-section">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showNav()"></i>
+            <div class="info">
+                <h4>Hi,</h4>
+                <h1>I'm <span>Keshav </span>Kumar</h1>
+                <h3>Web Developer</h3>
+                <h4>I design and build user interfaces</h4>
+            </div>
+        </div>
+
+         <div class="about section" id="about">
+            <div class="aboutphoto">
+                <img src="./images/aboutphoto.jpg" alt="">
+            </div>
+            <div class="aboutcontent heading">
+                <h1>About Me</h1>
+                <p class="about-para">Hello! I am Keshav Kumar. <br>Inventive and ambitious developer with more than six months of experience in designing and developing web project. I am committed to give satisfactory results on time and try my best to contribute in the success of the team.</p>
+                <div class="aboutSEE">
+                   <p class="tablink active-tab" onclick="opendiv('skills')">Skills</p>
+                   <p class="tablink" onclick="opendiv('experience')">Experience</p>
+                   <p class="tablink" onclick="opendiv('education')">Education</p>
+                </div>
+                <div class="about-content active-content" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+                        <li><span>Language</span><br>C/C++</li>
+                    </ul>
+                </div>
+                <div class="about-content" id="experience">
+                    <ul>
+                        <li><span>Working since almost six months as web developer</span></li>
+                        <li><span>Worked on some other projects as well</span></li>
+                    </ul>
+                </div>
+                <div class="about-content" id="education">
+                    <ul>
+                        <li><span>Pursuing Btech in Computer Science</span><br>2021-25</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-section heading section" id="work-section">
+            <h1>My work</h1>
+            <div class="my-work">
+                <div class="project">
+                    <img src="./images/calculator.jfif" alt="not found">
+                    <div class="layer">
+                        <h2>Calculator</h2>
+                        <p>It is a simple calculator that helps you to perform arithmetic operations on numbers. I build it using html, css and javascript.</p>
+                        <a href="https://github.com/keshavkumar23/OasisInfobyte_L2_T1" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./images/tictactoe.jfif" alt="not found">
+                    <div class="layer">
+                        <h2>Tic Tac Toe</h2>
+                        <p>It is a two players game. You can play it with your friends in free time. Html, css and javascript are used to create it.</p>
+                        <a href="https://github.com/keshavkumar23/TicTacToe" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="./images/todo.jfif" alt="not found">
+                    <div class="layer">
+                        <h2>To-Do WebApp</h2>
+                        <p>To-do list is a list of things that one wants to get done or that need to get done. You can maintain your do-to list with the help of this web app.(Not Responsive)</p>
+                        <a href="https://github.com/keshavkumar23/OasisInfobyte_L2_T3" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="viewmore">
+                <a href="" onclick="underD()" class="see">See All</a>
+            </div>
+        </div>
+
+       <div class="contant section" id="contact">
+            <div class="fhalf heading">
+                <h1>Contact Me</h1>
+                <div class="direct-contact">
+                    <div class="email">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:keshavkumar.dpr1@gmial.com" target="_blank">keshavkumar.dpr1@gmial.com</a> 
+                    </div>
+                    <div class="phone">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+91 7505385813">7505385813</a>
+                    </div>
+                </div>
+                <div class="somelinks">
+                    <a href="https://github.com/keshavkumar23" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/keshav-kumar-292687227/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/saini_keshav23/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+                <div class="downloadresume">
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                </div>
+            </div>
+            <div class="shalf">
+                <form action="/submit-inquiry" method="post" id="inquiry-form">
+                    <input type="text"id="name" placeholder="Your Name" autocomplete="off" name="name">
+                    <input type="email"id="email" placeholder="Your Email" autocomplete="off" name="email">
+                    <textarea id="msgta" cols="30" rows="10" placeholder="Your Message" name="message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/11ac305da1.js" crossorigin="anonymous"></script>
+<script src="./scripts/script.js"></script>
+</html>

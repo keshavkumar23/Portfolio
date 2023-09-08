@@ -1,0 +1,760 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: black;
+    color: wheat;
+    font-family: cursive;
+}
+html{
+    scroll-behavior: smooth;
+}
+ .photo{
+    height: 100vh;
+    background: url('../images/bg2.jpg');
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+.logo{
+    padding-left:30px;
+    font-size: 2.7rem;
+}
+.logoD{
+    color:rgb(8, 160, 220) ;
+}
+nav ul{
+    display: flex;
+    justify-content: right;
+    padding: 10px 20px;
+    margin-right: 4rem;
+}
+.photo nav ul li{
+    list-style: none;
+    padding:  0 30px;
+    font-size: 1.5rem;
+}
+.photo nav ul li  a{
+    color: wheat;
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+}
+.photo nav ul li a::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    background: rgb(8, 160, 220);
+    transition: 0.6s ;
+    border-radius: 10px;
+    align-items: center;
+}
+.photo nav ul li a:hover{
+    color: white;
+}
+.photo nav ul li a:hover::after{
+    width: 100%;
+}
+.info{
+    position: absolute;
+    right: 7rem;
+    top: 18rem;
+}
+.info h1 span{
+    color: rgb(8, 160, 220);
+}
+.info h4{
+    font-size: 1.5rem;
+}
+.info h1{
+    font-size: 4rem;
+}
+.info h3{
+    font-size: 2rem;
+} 
+
+
+/* -------------------------------------------------------------------------------------------------         about      ---------------------------------------------------------------------- */
+
+
+
+
+
+.about{
+    display: flex;
+}
+ .heading>h1{
+    font-size: 3rem;
+}
+ .aboutphoto{
+    flex-basis: 35%;
+}
+.aboutphoto img{
+    width: 300px;
+    height: 400px;
+    border-radius: 4rem;
+    margin: 9rem 2rem;
+    filter: brightness(50%);
+}
+.aboutcontent{
+    flex-basis: 60%;
+    margin-top: 10rem;
+}
+.aboutcontent h1{
+    padding-bottom: 3vh;
+}
+.aboutcontent p{
+    margin-right: 50px;
+}
+.aboutSEE{
+    display: flex;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    gap: 5rem;
+}
+.tablink{
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+}
+.tablink::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    background: rgb(8, 160, 220);
+    transition: 0.6s ;
+    border-radius: 10px;
+    align-items: center;
+}
+.tablink:hover{
+    color: white;
+}
+.tablink.active-tab::after{
+    width: 50%;
+}
+.about-content{
+    display: none;
+}
+.about-content.active-content{
+    display: block;
+    margin-top: 30px;
+}
+.about-content ul li span{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: wheat;
+}
+.about-content ul li{
+    color: rgb(8, 160, 220);
+    font-size: 1.2rem;
+    padding: 10px;
+} 
+
+
+/* -------------------------------------------------------------------------------------------------         projects      ---------------------------------------------------------------------- */
+
+
+/* .work-section{
+    height: 100vh;
+} */
+.work-section h1{
+    padding-top: 3vh;
+    text-align: center;
+}
+.project{
+    position: relative;
+    overflow: hidden;
+    height: 55vh;
+    width: 27vw;
+    border-radius: 40px
+}
+.project img{
+    border: none;
+    height: 100%;
+    width: 100%;
+    filter: brightness(65%);
+    display: block;
+    position: block;
+    transition: transform 1s;
+}
+.project:hover img{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.my-work{
+     display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 35px; 
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+    margin-top: 5vh;
+    margin-left: 3vw;
+}
+.layer h2{
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    border-radius: 40px;
+    border: none;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgb(8, 160, 220));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.7s;
+}
+.layer p{
+    padding-bottom: 50px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: wheat;
+    font-size: 18px
+}
+.layer a{
+    text-decoration: none;
+    color: rgb(8, 160, 220);
+    font-size: 1.5rem;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    background: wheat;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.project:hover .layer{
+    height: 100%;
+}
+.viewmore{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10vh 0;
+    font-weight: 600;
+}
+.viewmore a{
+    text-decoration: none;
+    background: rgb(8, 160, 220);
+    border-radius: 20px;
+    padding: 10px;
+    color: black;
+    transition: color 0.5s;
+}
+.viewmore a:hover{
+    color: wheat;
+}
+#contact{
+    display: flex;
+    height: 100vh;
+}
+.fhalf{
+    width: 50vw;
+}
+.shalf{
+    width: 50vw;
+    padding: 2rem;
+    padding-top: 4rem;
+}
+.shalf input[type='text'], input[type='email'], textarea{
+    width: 40vw;
+    background: rgb(39, 39, 39);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 1.3rem;
+    margin: 1.3rem 5vw;
+    color: wheat;
+    border: none;
+    font-weight: 400;
+}
+.shalf input[type='text'], input[type='email']{
+    height: 6vh;;
+}
+.shalf textarea{
+    padding-top: 10px;
+    font-size: 1.4rem;
+}
+.shalf button{
+    display: flex;
+    margin: 1.3rem auto;
+    height: 5vh;
+    width: auto;
+    border: none;
+    background: rgb(8, 160, 220);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-family: cursive;
+    transition: color 0.5s;
+}
+.shalf button:hover{
+    color: wheat;
+    cursor: pointer;
+}
+.fhalf h1{
+    text-align: center;
+    margin-top: 12vh;
+}
+.direct-contact{
+    margin: 10vh 7vw;
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+    margin-bottom: 20vh;
+}
+.direct-contact i{
+    font-size: 2rem;
+    color: rgb(8, 160, 220);
+}
+.email a, .phone a{
+    color: wheat;
+    text-decoration: none;
+    margin-left: 3vw;
+    font-size: 1.5rem;
+}
+.email a:hover, .phone a:hover{
+    color: white;
+}
+.email i{
+    margin-top: 3vh;
+}
+.phone span{
+    margin-left: 3.7vw;
+}
+.somelinks{
+    padding-left: 7vw;
+    margin-top: -50px;
+    margin-bottom: 40px;
+}
+.somelinks a{
+    color: rgb(8, 160, 220);
+}
+.somelinks a i{
+    font-size: 3rem;
+    padding: 0 44px;
+}
+.somelinks a i:hover{
+    color: wheat;
+}
+.downloadresume{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 70px;
+    margin-right: 2vw;
+}
+.downloadresume a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    background: rgb(8, 160, 220);
+    border-radius: 5px;
+    padding: 3px 15px;
+    padding-bottom: -1px;
+    transition: color 0.5s;
+}
+.downloadresume a:hover{
+    color: wheat;
+}
+
+
+.spy-indicator{
+    position: fixed;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.spy-indicator a{
+    padding: 10px;
+}
+.spy-indicator a::after{
+    content: '';
+    background: wheat;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.spy-indicator a:hover::after{
+    background: rgb(8, 160, 220);
+}
+.spy-indicator a.active-side-nav::after{
+    background: rgb(8, 160, 220);
+    width: 13px;
+    height: 13px;
+    transform: translate(-50%, -50%) translate(1.1);
+}
+.spy-indicator a::before{
+    content: attr(data-name);
+    background: rgb(8, 160, 220);
+    color: wheat;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    position: absolute;
+    right: 35px;
+    transform: translate(4px, -50%);
+    pointer-events: none;
+    box-shadow: -5px 5px 10px -3px rgb(200, 209, 212);
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+.spy-indicator a:hover::before{
+    opacity: 1;
+    transform: translate(0, -50%);
+} 
+nav .fa{
+    display: none;
+}
+@media  screen and (max-width: 850px) {
+    .my-work{
+        display: flex;
+        justify-content: center;
+        gap: 4vw;
+    }
+    .layer h2, .layer p{
+        font-size: 1rem;
+    }
+    .viewmore{
+        text-align: center;
+    }
+    .layer a{
+        bottom: 7px;
+    }
+    .work-section{
+        margin-left: 1vw;
+    }
+}
+@media  screen and (max-width: 799px) {
+    .my-work{
+        display: flex;
+        justify-content: center;
+        /* border: 2px solid red; */
+        padding: 2rem;
+    }
+    
+}
+@media  screen and (max-width: 657px) {
+    .layer h2, .layer p{
+        font-size: .7rem;
+    }
+    .my-work{
+        display: flex;
+        justify-content: center;
+        gap: 6vw;
+    }
+    .info{
+        padding-top: 20vh;
+    }
+} 
+
+@media screen and (max-width : 700px){
+     .photo{
+        background: url('../images/bg1.jpg');
+        background-size: cover;
+        position: relative;
+    }
+    .info{
+        /* border: 2px solid red; */
+        margin-right: 100px;
+        margin-top: 120px;
+    }
+    .info h4{
+        font-size: 1rem;
+    }
+    .info h1{
+        font-size: 2rem;
+    }
+    .info h3{
+        font-size: 1.1rem;
+    }
+    .photo nav{
+        position: absolute;
+        right: -80vw;
+        bottom: 0;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutphoto{
+        margin: auto;
+    }
+    .aboutphoto img{
+        margin-top: 10vh;
+    }
+    .aboutcontent h1{
+        text-align: center;
+    }
+    .aboutcontent p{
+        text-align: center;
+        margin-left: 6vw;
+    }
+    .aboutcontent{
+        margin-top: -20vh;
+    }
+    .aboutSEE{
+        display: flex;
+        gap: 2rem;
+    }
+    .about-content{
+        margin-left: 10vw;
+    }
+    .about-content ul li{
+        font-size: 1.1rem;
+    }
+    .about-content ul li span{
+        font-size: 1.2rem;
+    }
+    nav .fa-times{
+        display: block;
+    }
+    nav ul{
+        background: rgb(8, 160, 220);
+        position: fixed;
+        top: 0;
+        right: -65px;
+        width: 200px;
+        height: 100vh;
+        font-size: 4rem;
+        z-index: 100;
+        display: none;
+    }
+    .photo nav ul li{
+        text-align: center;
+        font-size: 1.9rem;
+        padding: 15px;
+        color: wheat;
+    }
+    .photo nav ul li:hover{
+        color: white;
+    }
+    .photo nav ul li a::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        background: wheat;
+        transition: 0.6s ;
+        border-radius: 10px;
+        align-items: center;
+    }
+    .photo nav ul li a:hover::after{
+        width: 100%;
+    }
+    .photo nav ul i{
+        text-align: center;
+        padding-bottom: 10px;
+        cursor: pointer;
+        color: wheat;
+    }
+    .photo .fa-bars{
+        display: block;
+        visibility: visible;
+    }
+} 
+.fa-bars{
+    cursor: pointer;
+    font-size: 2.5rem;
+    position: fixed;
+    right: 18px;
+    top: 18px;
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (max-width : 450px){
+    .info h4{
+        font-size: 0.9rem;
+    }
+    .info h1{
+        font-size: 1.8rem;
+    }
+    .info h3{
+        font-size: 1rem;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+    }
+    .about{
+        position: relative;
+    }
+    .aboutphoto img{
+        margin-left: 15vw;
+    }
+    .aboutcontent h1{
+        margin-left: 15vw;
+    }
+    .about-para{
+        width: 95%;
+        text-align: center;
+    }
+    .aboutSEE{
+        display: flex;
+        gap: 0.01rem;
+    }
+    .aboutSEE p{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width : 550px){
+    .photo{
+        background: url('../images/bg3.jpg');
+        background-size: cover;
+        position: relative;
+    }
+    .my-work{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .project{
+        width: 70%;
+    }
+    .layer h2{
+        font-size: 1.4rem;
+    }
+    .layer p{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width : 370px){
+    .project{
+        width: 100%;
+    }
+    .layer h2{
+        font-size: 2rem;
+    }
+    .layer p{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width : 1300px){
+    .direct-contact i{
+        font-size: 1.8rem;
+    }
+    .email a, .phone a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width : 1075px){
+    .somelinks a i{
+        padding: 0 35px;
+    }
+    .info{
+        padding-top: 20vh;
+    }
+}
+@media screen and (max-width : 950px){
+    .info{
+        margin-top: 20px;
+    }
+    #contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .fhalf, .shalf{
+        width: 100vw;
+    }
+    .direct-contact, .somelinks{
+        text-align: center;
+    }
+    .downloadresume{
+        margin-left: 8vw;
+    }
+    #name, #email, #msgta{
+        width: 80vw;
+    }
+}
+@media screen and (max-width : 1170px){
+    .info{
+        position: absolute;
+        right: 10rem;
+        top: 16rem;
+    }
+    .info h4{
+        font-size: 1.3rem;
+    }
+    .info h1{
+        font-size: 3rem;
+    }
+    .info h3{
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width : 1000px){
+    .info{
+        position: absolute;
+        right: 7rem;
+        top: 14.5rem;
+    }
+}
+@media screen and (max-width : 920px){
+    .info{
+        position: absolute;
+        right: 6rem;
+        top: 16rem;
+    }
+    .info h4{
+        font-size: 1.3rem;
+    }
+    .info h1{
+        font-size: 2.5rem;
+    }
+    .info h3{
+        font-size: 1.6rem;
+    }    
+}
+@media screen and (max-width : 840px){
+    .info{
+        position: absolute;
+        right: 1rem;
+        top: 16rem;
+    }
+    nav ul{
+        position: absolute;
+        right: -15rem;
+    }
+}
+@media screen and (max-width : 756px){
+    .info{
+        position: absolute;
+        right: -5rem;
+        top: 17rem;
+    }
+    .spy-indicator{
+        display: none;
+    }
+    nav ul{
+        position: absolute;
+        right: -10rem;
+    }
+}
